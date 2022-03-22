@@ -13,12 +13,12 @@
       "section": "Setup",
       "topics": [
         {
-          "title": "Theme configuration",
-          "slug": "theme-configuration"
-        },
-        {
           "title": "Arduino Library",
           "slug": "arduino-library"
+        },
+        {
+          "title": "Console",
+          "slug": "console"
         }
       ]
     }
