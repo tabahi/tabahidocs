@@ -1,7 +1,7 @@
 ---
-title: Forestry CMS
+title: Arduino Library
 date: 2020-01-02
-slug: forestry-cms
+slug: arduino-library
 
 ---
 ## Import starter
