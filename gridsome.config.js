@@ -16,7 +16,7 @@ function addStyleResource (rule) {
 }
 
 module.exports = {
-  siteName: 'Jamdocs',
+  siteName: 'Tabahi Console',
   siteUrl: 'https://jamdocs.samuelhorn.com',
   templates: {
     Doc: '/:slug',
