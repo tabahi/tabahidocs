@@ -1,12 +1,20 @@
 ---
 title: Getting started
-date: 2018-09-15 07:42:34
+date: 2018-09-15T07:42:34.000+00:00
 slug: getting-started
+
 ---
+## What is Tabahi Console
 
-## What is Jamdocs
+Tabahi Console is a Web-to-IoT interface to manage and remote control your IoT devices. Using Tabahi Console, you can:
 
-Jamdocs is a documentation theme for Gridsome, built to spin up quick, beautiful and static documentation sites fast without hassle. Since there is no theming system for Gridsome yet, Jamdocs comes with Gridsome, plug-ins and packages as dependencies.
+* Push data to the server and view it as tables and graphs.
+* Add/Edit variables on the web that are synced to the device. You can turn on remote switches through the web.
+* Set telegram notification for any variable value change.
+* You can run scripts on the server to avoid overloading small devices with heavy computing.
+* Easily send messages from one device to another without a direct link between them.
+* View device activity on the UDP monitor to debug it (Similar to Serial Monitor).
+* Over-the-Air (OTA) updates for ESP devices.
 
 ## Local installation
 
