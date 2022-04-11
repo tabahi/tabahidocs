@@ -1,16 +1,16 @@
 <template>
-  <a href="https://github.com/tabahi/TabahiConsole" :class="size" title="Git-repository" aria-label="Jamdocs on Github">
-    <github-icon class="icon" />
+  <a href="https://console.tabahi.tech" :class="size" title="Go to Console" aria-label="Go to Console">
+    <terminal-icon class="icon" />
     {{text}}
   </a>
 </template>
 
 <script>
-import { GithubIcon } from 'vue-feather-icons'
+import {  TerminalIcon } from 'vue-feather-icons'
 
 export default {
   components: {
-    GithubIcon
+    TerminalIcon
   },
   props: {
     size: {
@@ -19,7 +19,7 @@ export default {
     },
     text: {
       type: String,
-      default: 'Fork me on Github'
+      default: 'Console'
     }
   }
 }
