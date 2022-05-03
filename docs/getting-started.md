@@ -6,7 +6,7 @@ slug: getting-started
 ---
 # Console
 
-[http://console.tabahi.tech/](http://console.tabahi.tech/# "http://console.tabahi.tech/#")
+Sign up or Login to console here: [console.tabahi.tech](https://console.tabahi.tech)
 
 ## What is Tabahi Console
 
