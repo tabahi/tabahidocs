@@ -31,7 +31,7 @@ If everything works, you will see a new node appear on the [devices list](http:/
 
 A simple example for interfacing the console with ESP32 or ESP8266:
 
-```bash
+```cpp
 #include <TabahiConsole.h>
 
 const char* ssid     = "WiFi Name";
@@ -157,3 +157,4 @@ void push_data()
   if (Console.CommitData(&TCPclient) > 0) Console.logln("Data sent");
 }
 ```
+

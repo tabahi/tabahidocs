@@ -15,9 +15,11 @@ While executing a script, arguments aren't required unless some device specific 
 ```javascript
 if(args)
 {
+  	if(args.abc) script.log(args.abc);
     if(args.NT)
     {
-        setNewVariable(args.NT);
+        print(args.NT);
+      	script.log(args.NT);
     }
     else print("No NT argument given");
     //to test, pass arguments as:
