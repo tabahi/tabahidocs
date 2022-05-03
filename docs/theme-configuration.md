@@ -6,11 +6,11 @@ slug: scripts
 ---
 ## Scripts
 
-Scripts in the [console](http://console.tabahi.tech/#scripts) are exucuted in a javascript container in order to process computations on the console cloud. Scripts only support basic javascript functions, `node`class functions to parse data to and from devices, and `script` class functions for debugging purposes.
+Scripts in the [console](http://console.tabahi.tech/#scripts) are executed in a javascript container in order to process computations on the console cloud. Scripts only support basic javascript functions, `node`class functions to parse data to and from devices, and `script` class functions for debugging purposes.
 
 ### Arguments
 
-While executing a script, arguments aren't required unless some device specific interface is needed. Alternatively, arguments can be strings of data themselves thus skipping any need for fetching data from device databases.
+While executing a script, arguments aren't required unless some device-specific interface is needed. Alternatively, arguments can be strings of data themselves thus skipping any need for fetching data from device databases.
 
 ```javascript
 if(args)
@@ -29,7 +29,7 @@ if(args)
 
 ### Script Logs
 
-Script logs are for debuging purposing and can only be viewed on the console when the Debug button is pressed. In comparison, `print()`prints the data as the externally viewable output of the script.
+Script logs are for debugging purposing and can only be viewed on the console when the Debug button is pressed. In comparison, `print()`prints the data as the externally viewable output of the script.
 
 ```javascript
 script.log(new Date() + "\t Test script");//log time and date of run
@@ -40,7 +40,7 @@ print("This is published on run");
 
 ### Interfacing with Devices
 
-Scripts can read, set variables, and get single of multiple data rows from the device database using `NODE_TOKEN` or `NT`. Scripts can help to perform the switching of variables after analyzing rows of data because small devices can't hold a lot of data in their memory.
+Scripts can read, set variables, and get single or multiple data rows from the device database using `NODE_TOKEN` or `NT`. Scripts can help to perform the switching of variables after analyzing rows of data because small devices can't hold a lot of data in their memory.
 
 ```javascript
 
