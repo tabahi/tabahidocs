@@ -13,6 +13,7 @@ Tabahi Console is a Web-to-IoT interface to manage and remote control your progr
 * Set telegram notification for any variable value change.
 * You can run scripts on the server to avoid overloading small devices with heavy computing.
 * Easily send messages from one device to another without a direct link between them.
+* Check weather forecast and sun timings.
 * View device activity on the UDP monitor to debug it (Similar to Serial Monitor).
 * Over-the-Air (OTA) updates for ESP32 and ESP8266.
 
@@ -21,8 +22,8 @@ Tabahi Console is a Web-to-IoT interface to manage and remote control your progr
 To start programming, follow these steps:
 
 1. Install Arduino IDE.
-2. Install ESP32 or ESP8266 compiler on Arduino IDE.
-3. Download and add the Tabahi Console library to the Arduino IDE.
+2. Install [ESP32](https://microcontrollerslab.com/install-esp32-arduino-ide/) or [ESP8266](https://microcontrollerslab.com/how-to-install-esp8266-board-arduino-ide/) compiler on Arduino IDE.
+3. Download and add the [Tabahi Console library](https://github.com/tabahi/TabahiConsole) to the Arduino IDE. Goto **Sketch > Include Library > Add .ZIP Library** to install the library.
 4. Create an account on [console.tabahi.tech](http://console.tabahi.tech). Sign and view your Token on the [account](http://console.tabahi.tech/#account) page.
 5. Run the first example after configuring your _USER_TOKEN_ and _USER_SECRET_.
 
