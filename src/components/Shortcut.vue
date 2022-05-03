@@ -15,8 +15,8 @@ import { PlayIcon, CpuIcon, CodeIcon } from 'vue-feather-icons'
 export default {
   components: {
     PlayIcon,
-    SlidersIcon,
-    EyeIcon
+    CpuIcon,
+    CodeIcon
   },
   props: {
     link: {
