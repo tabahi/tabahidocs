@@ -4,15 +4,12 @@ date: 2022-01-21
 slug: arduino-library
 
 ---
-
 ## Initializing
-
 
 Start by initializing the class
 
 `TTC Console(TTC_server, TTC_port, UDP_port, USER_TOKEN, USER_SECRET, DEBUG_TTC);`
 then call the following during `setup()`:
-
 
 ```cpp
 #include <TabahiConsole.h>
@@ -46,8 +43,6 @@ void setup()
   */
 }
 ```
-
-
 
 ## Device Identification
 
@@ -83,14 +78,13 @@ If you already added a device manually on the web console then set the assigned 
 Console.set_NODE_TOKEN("61800000000000000000000"); //see the Configure tab for NT after adding a device
 ```
 
-The mac address is the easiest identifier you can read and use for differentiating devices without changing the code for each device. It's not necessarily required by the console. If two of your devices are using the same identifier then the console will consider them as a single device. Once a Node Token is assigned then the mac address (or unique ID) isn't needed for variables and data syncing. 
+The mac address is the easiest identifier you can read and use for differentiating devices without changing the code for each device. It's not necessarily required by the console. If two of your devices are using the same identifier then the console will consider them as a single device. Once a Node Token is assigned then the mac address (or unique ID) isn't needed for variables and data syncing.
 
-UDP monitor doesn't use Node Token, instead it uses any String name you pass during `Console.CommitLogs("name_for_UDP_monitor");`. We use the mac address to make sure that each device shows up with a different name.
+UDP monitor doesn't use Node Token, instead, it uses any String name you pass during `Console.CommitLogs("name_for_UDP_monitor");`. We use the mac address to make sure that each device shows up with a different name.
 
 ## Syncing
 
-Syncing is performed over a secure TCP protocol. It first sends the values from the device's memory, then fetches the latest values from the console cloud. Optionally, you can also trigger a script on console after the sync.
-
+Syncing is performed over a secure TCP protocol. It first sends the values from the device's memory, then fetches the latest values from the console cloud. Optionally, you can also trigger a script on the console after the sync.
 
 ```cpp
 WiFiClient TCPclient;
@@ -117,10 +111,9 @@ if (Console.isValidType("example", 'b'))
 int new_var = 123;
 Console.set_int("new_var", new_var);
 //this new value will show on the console after the next sync cycle
-
 ```
 
-In the case of a conflict, the value from the console is preferred. But if the value changes on both sides, on the console AND on the device between two syncs, then the value from the device is preferred unless the variable is set to constant. There is a 2 minutes grace period for the console to yield when the device changes to a new value while the user has recently updated a new value in console. In other words, the new value that the user has set on the console will be discarded after 2 minutes because the device keeps on updating to a newer value. To avoid this, don't update the value on the console if the device is programmed to always set to a newer value between two syncs.
+In the case of a conflict, the value from the console is preferred. But if the value changes on both sides, on the console AND on the device between two syncs, then the value from the device is preferred unless the variable is set to constant. There is a 2 minutes grace period for the console to yield when the device changes to a new value while the user has recently updated a new value in the console. In other words, the new value that the user has set on the console will be discarded after 2 minutes because the device keeps on updating to a newer value. To avoid this, don't update the value on the console if the device is programmed to always set to a newer value between two syncs.
 
 To trigger a script on the cloud after the sync use:
 
@@ -129,19 +122,13 @@ To trigger a script on the cloud after the sync use:
   int n_vars = runSync(&TCPclient, "script_token", "arg1=abcd, arg2=123");
 ```
 
-where `script_token` is a 24 character token assigned to the script on the console. And `args` are the arguments to be passed to the script. e.g., `val=ABC0000000, a=123`. Leave empty as `""` if there are no arguments.
-
-
+where `script_token` is a 24-character token assigned to the script on the console. And `args` are the arguments to be passed to the script. e.g., `val=ABC0000000, a=123`. Leave empty as `""` if there are no arguments.
 
 ## Data Logging
 
-Data is inserted into the tables using a timestamp. Timestamp is created when `Console.newDataRow()` is called. Unlike synced variables, `Console.push_` functions are a one-way traffic. The device gets an acknowledgement upon the successful data insertion but it can't read back the data. The limit of data rows is less than variable writes on the console but users can delete the old data on the console to make space for the newer data.
+Data is inserted into the tables using a timestamp. The timestamp is created when `Console.newDataRow()` is called. Unlike synced variables, `Console.push_` functions are one-way traffic. The device gets an acknowledgment upon the successful data insertion but it can't read back the data. The limit of data rows is less than variable writes on the console but users can delete the old data on the console to make space for the newer data.
 
-Example usage for `push_float`,
-`push_int`,
-`push_long`,
-`push_ulong`,
-`push_String`:
+Example usage for `push_float`, `push_int`, `push_long`, `push_ulong`, `push_String`:
 
 ```cpp
   //create a data row:
@@ -156,7 +143,7 @@ Example usage for `push_float`,
   if (Console.CommitData(&TCPclient) > 0) Console.logln("Data sent");
 ```
 
-Alternatively you can push data in JSON format with a single command:
+Alternatively, you can push data in JSON format with a single command:
 
 ```cpp
 Console.SendJSON(&TCPclient, "{\"row1\":{\"data1\": 90, \"data2\": 0.211, \"data3\": \"chill\"}, \"time\":" + String(Console.realtime()) + "}");
@@ -165,11 +152,10 @@ Console.SendJSON(&TCPclient, "{\"row1\":{\"data1\": 90, \"data2\": 0.211, \"data
 Console.SendJSON(&TCPclient, "{\"row2\":{\"data1\": 80, \"data2\": 0.456, \"data3\": \"pill\"}}"); //server adds it's own timestamp if no epoch 'time' is given.
 //Don't make rows too big to handle for memory
 //No need to CommitData after SendJSON
-
 ```
 
-
 ## Intra-Node Communication
+
 Small messages (300 chars) can be sent from one device to another via the console cloud. The `runSync` also checks the number of messages in the inbox for a device:
 
 ```cpp
@@ -179,10 +165,9 @@ if (n_vars >= 0) //check if variables sync was ok
 {
   Serial.printf("Inbox count: %d \n", Console.inbox);
 }
-
 ```
 
-Then  read all the messages one-by-one in either top-to-bottom or from bottom-to-top manner
+Then  read all the messages one-by-one in either top-to-bottom or bottom-to-top manner
 
 ```cpp
 while (Console.inbox > 0)
@@ -222,10 +207,9 @@ int sendMsgStatus = Console.sendMessage(&TCPclient, mac_address, "yo, sup?");
 Serial.print("Msg sent:\t"); Serial.println(sendMsgStatus); //1 = sent
 ```
 
-
 ## UDP Monitor
 
-UDP monitor uses a simpler, faster, protocol without any encryption to deliver debugging or informational logs to the console. The mechanism for UDP only requires the correct `USER_TOKEN` to work, therefore can be used to debug other more sophisticated functionalities in case of failure.
+UDP monitor uses a simpler, faster, protocol without any encryption to deliver debugging or informational logs to the console. The mechanism for UDP only requires the correct `USER_TOKEN` to work therefore can be used to debug other more sophisticated functionalities in case of failure.
 
 ```cpp
 //print some logs on UDP monitor:
@@ -240,11 +224,9 @@ The identifier for UDP monitor can be anything but it helps to keep devices sepa
 
 Note: Avoid sending critical information such as `USER_TOKEN` over the UDP Monitor because it's not encrypted. Whereas, all other features such as `runSync, CommitData and sendMessage` are encrypted for increased security.
 
-
 ## Weather
 
-You can get the weather forecast and sun timing using the Latitude and Longitude for a location. The API uses the data provided by met.no, which provide data for local times around the globe.
-
+You can get the weather forecast and sun timing using the Latitude and Longitude of a location. The API uses the data provided by met.no, which provides data for local times around the globe.
 
 ```cpp
 
@@ -281,12 +263,11 @@ void checkWeatherForecast()
 }
 ```
 
-The forecast data for `WEATHER_HOURS_MAX` hours is held in the memory for later use, so that the device doesn't have to check the forecast again and again. The decrease or increase the number of forecast hours, edit the first line of `SettingsTTC.h`.
+The forecast data for `WEATHER_HOURS_MAX` hours is held in the memory for later use so that the device doesn't have to check the forecast again and again. The decrease or increase the number of forecast hours, edit the first line of `SettingsTTC.h`.
 
 ## Sunrise and Sunset
 
-Some daylight dependent applications require the sunrise and sunset timings. Met.no API provides these timings in local time. The elevation of the sun at noon is also provided for solar tracking applications.
-
+Some daylight-dependent applications require sunrise and sunset timings. Met.no API provides these timings in local time. The elevation of the sun at noon is also provided for solar tracking applications.
 
 ```cpp
 
@@ -311,9 +292,7 @@ void checkSunrise()
   Serial.print("\tMoon phase: ");
   Serial.println(Console.moon_phase);
 }
-
 ```
-
 
 ## OTA Update
 
@@ -346,47 +325,52 @@ void try_update()
   }
 }
 ```
+
 See example `OTAupdate.ino` for updating with a safe mode in case the updated version keeps on restarting.
-
-
-
 
 ## TTC Console Class
 
-Use all this functions with the class prefix. e.g., `Console.get_int`
+Use all these functions with the class prefix. e.g., `Console.get_int`
+
 ### Variables
 
 #### Variable: int
+
 ```cpp
 int16_t get_int(char *key_name);
 bool set_int(char *key_name, int16_t val);
 ```
 
 #### Variable: float
+
 ```cpp
 float get_float(char *key_name);
 bool set_float(char *key_name, float val);
 ```
 
 #### Variable: long
+
 ```cpp
 long get_long(char *key_name);
 bool set_long(char *key_name, long val);
 ```
 
 #### Variable: ulong
+
 ```cpp
 unsigned long get_ulong(char *key_name);
 bool set_ulong(char *key_name, unsigned long val);
 ```
 
 #### Variable: bool
+
 ```cpp
 bool get_bool(char *key_name);
 bool set_bool(char *key_name, bool val);
 ```
 
 #### Variable: String
+
 ```cpp
 String get_String(char *key_name);
 bool set_String(char *key_name, String val);
@@ -396,22 +380,23 @@ bool set_String(char *key_name, String *val);
 ```
 
 #### Variable: time
+
 ```cpp
 //unsigned long UTC epoch in seconds
 unsigned long get_time(char *key_name);
 bool set_time(char *key_name, unsigned long val);
 ```
 
-
 #### Variable: hex
+
 ```cpp
 byte *get_hex(char *key_name); //returns the pointer of the array
 
 bool set_hex(char *key_name, byte val[], uint16_t len);
 ```
 
-
 #### Variable: geo-coordinates (lat, long)
+
 ```cpp
 bool set_geo(char *key_name, String val_lat, String val_lon);
 
@@ -426,7 +411,6 @@ void ClearAllVariables();
 void Clear(char *key_name); //clear a specific variable from memory
 ```
 
-
 #### Verify
 
 ```cpp
@@ -434,10 +418,7 @@ bool isValidType(char *key_name, char type); //verify if the variable of this na
 bool isValid(char *key_name); //verify if variable exists
 ```
 
-
-
 ### Data functions
-
 
 ```cpp
 void DataClear(); //clear if there is some data in memory. It's cleared after Commit anyway.
@@ -454,7 +435,6 @@ int SendJSON(TCPClientObj *TCPclient, String data_json);
 //must use with the class prefix as Console.push_int('a', 1)
 ```
 
-
 ### Time functions
 
 ```cpp
@@ -468,10 +448,10 @@ uint8_t hour(void); //0-24, UTC (set Timezone from console)
 uint8_t minute(void); ///0-59
 
 //must use with the class prefix as Console.weekday()
-
 ```
 
 ## Error codes
+
 ```cpp
 ERR_FAILED_CONN -1      //Connection failed to the server
 ERR_FAILED_CONN_10x -10 //10 times consistent failure. Probably no internet connection.
