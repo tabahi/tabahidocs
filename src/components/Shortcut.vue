@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { PlayIcon, PlayIcon, PlayIcon } from 'vue-feather-icons'
+import { PlayIcon, CpuIcon, CodeIcon } from 'vue-feather-icons'
 
 export default {
   components: {
