@@ -4,6 +4,8 @@ date: 2022-01-21
 slug: arduino-library
 
 ---
+Download the library from [here](https://github.com/tabahi/TabahiConsole).
+
 ## Initializing
 
 Start by initializing the class
