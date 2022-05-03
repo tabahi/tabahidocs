@@ -26,7 +26,7 @@ To start programming, follow these steps:
 4. Create an account on [console.tabahi.tech](http://console.tabahi.tech). Sign and view your Token on the [account](http://console.tabahi.tech/#account) page.
 5. Run the first example after configuring your _USER_TOKEN_ and _USER_SECRET_.
 
-If everything works, you will see a new node appear on the [nodes list](http://console.tabahi.tech/#nodes).
+If everything works, you will see a new node appear on the [devices list](http://console.tabahi.tech/#nodes).
 
 Even though Jamdocs is so simple, you dont really need to set it up localy (you could just fork it on github to edit styles and md-files) - if you want to change it up a bit I recommend setting up localy for a better developer experience.
 
@@ -35,11 +35,10 @@ To set up a new instance of Jamdocs, and start developing just clone the project
 ```bash
 #include <TabahiConsole.h>
 
-#define TTC_server "console.tabahi.tech"
+#define TTC_server "api.tabahi.tech"
 #define USER_TOKEN "6223338df64144aac74a3622"
 #define USER_SECRET "Deu9DqvSS6pbNuIoI43aCh"
 #define DEBUG_TTC 1 //set to 1 to print verbose info on Serial
 
 TTC Console(TTC_server, 2096, 44561, USER_TOKEN, USER_SECRET, DEBUG_TTC);
-
 ```
