@@ -6,7 +6,7 @@ slug: getting-started
 ---
 # Console
 
-Sign up or Login to console here: [console.tabahi.tech](https://console.tabahi.tech)
+Sign up or Login to the console here: [console.tabahi.tech](https://console.tabahi.tech)
 
 ## What is Tabahi Console
 
@@ -17,7 +17,7 @@ Tabahi Console is a Web-to-IoT interface to manage and remote control your progr
 * Set telegram notification for any variable value change.
 * You can run scripts on the server to avoid overloading small devices with heavy computing.
 * Easily send messages from one device to another without a direct link between them.
-* Check weather forecast and sun timings.
+* Check the weather forecast and sun timings.
 * View device activity on the UDP monitor to debug it (similar to Serial Monitor).
 * Over-the-Air (OTA) updates for ESP32 and ESP8266.
 
