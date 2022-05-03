@@ -1,89 +1,73 @@
 ---
-title: Console
-date: 2018-09-15T07:42:34.000+00:00
-slug: console
+title: Scripts
+date: 2022-03-17
+slug: scripts
 
 ---
-## Changing logo
+## Scripts
 
-blank,``code``
+Scripts in the [console](http://console.tabahi.tech/#scripts) are exucuted in a javascript container in order to process computations on the console cloud. Scripts only support basic javascript functions, `node`class functions to parse data to and from devices, and `script` class functions for debugging purposes.
 
-## Adding icons
+### Arguments
 
-blank,
-
-```javascript
-import { MoonIcon, SunIcon } from 'vue-feather-icons'
-
-export default {
-  components: {
-    MoonIcon,
-    SunIcon
-  },
-...
-```
-
-And then the icon can be used like this:
-
-```html
-<sun-icon class="sun" />
-```
-
-## Changing colors
-
-blank,
-
-```scss
-// Dark theme
-$backgroundDark: #18191a;
-$sidebarDark: #2a2c2f;
-$textDark: #fff;
-
-// Bright theme
-$backgroundBright: #fff;
-$sidebarBright: #f3f4f5;
-$textBright: #2a2c2f;
-
-// Brand
-$brandPrimary: #10c186;
-```
-
-## Changing font
-
-dddd
-
-```bash
-yarn add typeface-open-sans
-```
-
-Then, on line 7 in `src/main.js` you change the line to:
+While executing a script, arguments aren't required unless some device specific interface is needed. Alternatively, arguments can be strings of data themselves thus skipping any need for fetching data from device databases.
 
 ```javascript
-require('typeface-open-sans')
-```
-
-ok
-
-```scss
-font-family: 'Open Sans', sans-serif;
-```
-
-You're done!
-
-## Edit the sidebar
-
-Thiss:
-
-```json
+if(args)
 {
-  "section": "Introduction",
-  "topics": [
+    if(args.NT)
     {
-      "title": "Getting started",
-      "slug": "getting-started"
+        setNewVariable(args.NT);
     }
-  ]
+    else print("No NT argument given");
+    //to test, pass arguments as:
+    //where NT is the NODE_TOKEN as argument
 }
 ```
 
-End
+### Script Logs
+
+Script logs are for debuging purposing and can only be viewed on the console when the Debug button is pressed. In comparison, `print()`prints the data as the externally viewable output of the script.
+
+```javascript
+script.log(new Date() + "\t Test script");//log time and date of run
+script.log("Args: ", args); //show the arguments passed to this script
+
+print("This is published on run");
+```
+
+### Interfacing with Devices
+
+Scripts can read, set variables, and get single of multiple data rows from the device database using `NODE_TOKEN` or `NT`. Scripts can help to perform the switching of variables after analyzing rows of data because small devices can't hold a lot of data in their memory.
+
+```javascript
+
+//get the NODE_TOKEN from the argumenets:
+var NT = args.NT;
+
+let variables = await node.getVariables(NT);
+script.log("Variables:"); script.log(variables);
+
+//setting a boolean variable
+await node.setVariable(NT, 'heater', 'b', new_heater);
+
+//setting an integer variable
+await node.setVariable(NT, 'init', 'i', 100);
+
+//setting a float variable (constant)
+await node.setVariable(NT, 'init', 'f', 100, 1); //1:constant, 0: not-constant
+
+//setting multiple variables:
+await node.setVariables(NT, [{name:"var1", type:"i", value:10, constant:0}, {name:"var2", type:"f", value:20.6, constant:1}]);
+
+//Get latest data row from last 0.5 hour:
+let data = await node.getData(NT, 'latest', 0.5);
+script.log("Data:"); script.log(data);
+
+//Get multiple data rows from last 3 hours:
+let data_rows = await node.getData(NT, 'multiple', 3);
+script.log("Data:"); script.log(data_rows);
+
+//add a new data row:
+await pushData(NT, {"air": 0.5, "surfacer": 3.2});
+```
