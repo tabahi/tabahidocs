@@ -6,8 +6,6 @@ slug: features
 ---
 Sign up or Login to the console here: [console.tabahi.tech](https://console.tabahi.tech)
 
-![Tabahi Console IoT Cloud Framework](/ttc.png "Framwork of Tabahi Console")
-
 ## What is Tabahi Console
 
 Tabahi Console is a Web-to-IoT interface to manage and remote control your programmable IoT devices. Using Tabahi Console, you can:
@@ -20,6 +18,8 @@ Tabahi Console is a Web-to-IoT interface to manage and remote control your progr
 * Check the weather forecast and sun timings.
 * View device activity on the UDP monitor to debug it (similar to Serial Monitor).
 * Over-the-Air (OTA) updates for ESP32 and ESP8266.
+
+![](/ttc.png)
 
 ### Devices
 
