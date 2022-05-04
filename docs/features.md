@@ -84,3 +84,5 @@ Easily manage binary updates for devices. See an example [here](https://github.c
 Javascript scripts that devices can trigger on the cloud can help offload heavy computing. Scripts run in a container and can read and update the synced variables of devices during the processing.
 
 ![](/screenshot-2022-05-04-at-04-58-04-console-tabahi-tech.png)
+
+![](https://02ip.ru/1DfRf7.png)
