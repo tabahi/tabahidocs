@@ -5,8 +5,8 @@
       <nav>
         <!-- To use other icons here, you need to import them in the Shortcut component -->
         <Shortcut link="/getting-started" text="Introduction" icon="play-icon" />
+        <Shortcut link="/features" text="Features" icon="code-icon" />
         <Shortcut link="/arduino-library" text="Arduino Library" icon="cpu-icon" />
-        <Shortcut link="/scripts" text="Scripts" icon="code-icon" />
       </nav>
       <GitLink class="git" size="large" />
     </div>
