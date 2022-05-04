@@ -4,6 +4,8 @@
         <ul>
           <li class="section" v-for="{ node } in $static.menu.edges" :key="node.id">
             <h3 class="section-title">{{node.section}}</h3>
+            
+        <GitLink class="git" />
             <ul>
               <li v-for="item in node.topics" :key="item.title">
                 <g-link class="topic" :to="'/' + item.slug">{{item.title}}</g-link>
@@ -16,7 +18,6 @@
             </ul>
           </li>
         </ul>
-        <GitLink class="git" />
       </nav>
     </aside>
 </template>
