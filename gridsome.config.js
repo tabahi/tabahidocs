@@ -35,12 +35,6 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: 'G-KW7L28FG8K'
-      }
-    },
-    {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000
