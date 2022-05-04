@@ -75,8 +75,12 @@ UDP monitor is a simpler, faster, plain protocol for viewing the raw activity lo
 
 ### OTA Update
 
+Easily manage binary updates for devices. See an example [here](https://github.com/tabahi/TabahiConsole/blob/main/examples/OTAupdate/OTAupdate.ino) for a quick start with a safe mode in case of faulty codes.
+
 ![](/screenshot-2022-05-04-at-04-57-45-console-tabahi-tech.png)
 
 ### Scripts
+
+Javascript scripts that devices can trigger on the cloud can help offload heavy computing. Scripts run in a container and can read and update the synced variables of devices during the processing.
 
 ![](/screenshot-2022-05-04-at-04-58-04-console-tabahi-tech.png)
