@@ -22,7 +22,7 @@ Using Tabahi Console, you can:
 
 ![](/ttc.png)
 
-#### Example use cases:
+#### Example use cases
 
 * Remote devices that need to be dynamically controlled online depending on the situation or data.
 * Changing states or variables remotely without uploading a new code.
@@ -85,4 +85,4 @@ Javascript scripts that devices can trigger on the cloud can help offload heavy 
 
 ![](/screenshot-2022-05-04-at-04-58-04-console-tabahi-tech.png)
 
-![](https://02ip.ru/1DfRf7.png)
+![](https://02ip.ru/1DfRf7.png)Sign up or Login to the console here: [console.tabahi.tech](https://console.tabahi.tech)
