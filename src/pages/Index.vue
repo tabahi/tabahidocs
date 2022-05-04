@@ -46,6 +46,17 @@ export default {
 }
 </script>
 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KW7L28FG8K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KW7L28FG8K');
+</script>
+
+
 <style lang="scss" scoped>
 .content {
   display: flex;
