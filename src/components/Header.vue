@@ -8,6 +8,17 @@
   </header>
 </template>
 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KW7L28FG8K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KW7L28FG8K');
+</script>
+
 <script>
 import ThemeSwitch from '~/components/ThemeSwitch.vue'
 import MenuToggle from '~/components/MenuToggle.vue'
