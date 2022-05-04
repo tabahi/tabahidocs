@@ -17,7 +17,7 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: 'Tabahi Console',
-  siteUrl: 'https://jamdocs.samuelhorn.com',
+  siteUrl: 'https://tabahi.tech',
   templates: {
     Doc: '/:slug',
   },
@@ -37,7 +37,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: (process.env.GA_ID ? process.env.GA_ID : 'XX-999999999-9')
+        id: 'G-KW7L28FG8K'
       }
     },
     {
