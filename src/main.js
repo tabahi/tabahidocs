@@ -1,10 +1,11 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
-import DefaultLayout from '~/layouts/Default.vue'
-import '~/assets/scss/globals.scss'
-import Vuex from 'vuex'
-require('typeface-source-sans-pro')
+import DefaultLayout from '~/layouts/Default.vue';
+import '~/assets/scss/globals.scss';
+import Vuex from 'vuex';
+import VueGtag from "vue-gtag";
+require('typeface-source-sans-pro');
 
 export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(Vuex)
