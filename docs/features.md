@@ -4,7 +4,7 @@ date: 2022-04-29
 slug: features
 
 ---
-Sign up or Login to the console here: [console.tabahi.tech](http://console.tabahi.tech)
+Sign up or Login to the console here: [console.tabahi.tech](https://console.tabahi.tech)
 
 ## Tabahi Console
 
@@ -86,6 +86,6 @@ Javascript scripts that devices can trigger on the cloud can help offload heavy 
 
 <img src="/screenshot-2022-05-04-at-04-58-04-console-tabahi-tech.png" alt="console view" width="1400"/>
 
-Sign up or Login to the console here: [console.tabahi.tech](http://console.tabahi.tech)
+Sign up or Login to the console here: [console.tabahi.tech](https://console.tabahi.tech)
 
 <img src="https://02ip.ru/1DfRf7.png"  width="0"/>
