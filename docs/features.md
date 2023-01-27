@@ -34,7 +34,7 @@ Using Tabahi Console, you can:
 
 Add up to 10 devices. Currently, the Arduino library supports ESP32 and ESP866 devices.
 
-![](/screenshot-2022-05-04-at-04-55-48-console-tabahi-tech.png)
+![](/screenshot-2022-05-04-at-04-55-48-console-tabahi-tech.png  =1000x2000)
 
 ### Variables Syncing
 
