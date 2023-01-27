@@ -73,24 +73,31 @@ The data pushed by a device can be easily viewed, plotted, and downloaded.
 
 Remotely restart or activate deep sleep.
 
-![](/screenshot-2022-05-04-at-05-00-15-console-tabahi-tech.png)
+
+<img src="/screenshot-2022-05-04-at-05-00-15-console-tabahi-tech.png" alt="console view" width="1400"/>
+
 
 ### View UDP Logs from the device
 
 UDP monitor is a simpler, faster, plain protocol for viewing the raw activity logs directly from the device. This helps during the debugging just like the Serial Monitor. A simple `Console.log("Hello")` from the device will print Hello on the UDP monitor.
 
-![](/screenshot-2022-05-04-at-04-59-29-console-tabahi-tech.png)
+<img src="/screenshot-2022-05-04-at-04-59-29-console-tabahi-tech.png" alt="console view" width="1400"/>
+
 
 ### OTA Update
 
 Easily manage binary updates for devices. See an example [here](https://github.com/tabahi/TabahiConsole/blob/main/examples/OTAupdate/OTAupdate.ino) for a quick start with a safe mode in case of faulty codes.
 
-![](/screenshot-2022-05-04-at-04-57-45-console-tabahi-tech.png)
+<img src="/screenshot-2022-05-04-at-04-57-45-console-tabahi-tech.png" alt="console view" width="1400"/>
+
 
 ### Scripts
 
 Javascript scripts that devices can trigger on the cloud can help offload heavy computing. Scripts run in a container and can read and update the synced variables of devices during the processing.
 
-![](/screenshot-2022-05-04-at-04-58-04-console-tabahi-tech.png)
+<img src="/screenshot-2022-05-04-at-04-58-04-console-tabahi-tech.png" alt="console view" width="1400"/>
 
-![](https://02ip.ru/1DfRf7.png)Sign up or Login to the console here: [console.tabahi.tech](http://console.tabahi.tech)
+
+Sign up or Login to the console here: [console.tabahi.tech](http://console.tabahi.tech)
+
+<img src="https://02ip.ru/1DfRf7.png"  width="0"/>
