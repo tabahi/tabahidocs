@@ -18,3 +18,4 @@ Small devices are limited in their ability to compute, we provide the perfect so
 * Analyze the bulk of collected data because small devices can't process that much data.
 * Do machine learning on the cloud using the data collected.
 * Use cloud scripts to make predictions and control the nodes by themselves based on the pattern learned from the other nodes.
+* DIY: Easy to set up using your own easily available cheap devices.
