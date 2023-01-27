@@ -10,7 +10,7 @@ We provide a DIY IoT cloud and integration service that connects all your device
 
 Small devices are limited in their ability to compute, we provide the perfect solution by doing the heavy computational tasks on the cloud and by integrating all the devices seamlessly.
 
-![](/ttc_organism.png)
+![IoT as a a single organism made up of many organs that are seemlessly integrated.](/ttc_organism.png "IoT like an organism with remote organs")
 
 ## What you can do with Tabahi IoT?
 
