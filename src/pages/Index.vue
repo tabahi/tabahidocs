@@ -8,7 +8,7 @@
         <Shortcut link="/getting-started" text="Getting Started" icon="play-icon" />
         <Shortcut link="/arduino-library" text="Arduino Library" icon="cpu-icon" />
       </nav>
-      <GitLink class="git" size="large" />
+      
     </div>
   </Layout>
 </template>
@@ -22,12 +22,10 @@ query {
 </static-query>
 
 <script>
-import GitLink from '~/components/GitLink.vue'
 import Shortcut from '~/components/Shortcut.vue'
 
 export default {
   components: {
-    GitLink,
     Shortcut
   },
   data() {
