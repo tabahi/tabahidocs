@@ -1,7 +1,7 @@
 <template>
     <aside class="sidebar" :class="{'sidebar--open' : this.$store.state.sidebarOpen}">
-      <nav>
       <GitLink class="git" />
+      <nav>
         <ul>
           <li class="section" v-for="{ node } in $static.menu.edges" :key="node.id">
             <h3 class="section-title">{{node.section}}</h3>
