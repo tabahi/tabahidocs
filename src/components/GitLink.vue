@@ -57,15 +57,14 @@ a {
     margin-right: 4px;
   }
 
-  &.large {
+   &.large {
     @include respond-above(sm) {
-      font-size: 12px;
-      padding: 8px 10px;
-      line-height: 14px;
-
+      font-size: 18px;
+      padding: 12px 20px;
+      line-height: 24px;
       svg {
-        width: 20px;
-        height: 14px;
+        width: 24px;
+        height: 24px;
       }
     }
   }
