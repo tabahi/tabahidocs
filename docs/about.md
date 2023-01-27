@@ -12,8 +12,7 @@ Small devices are limited in their ability to compute, we provide the perfect so
   
 ![](/ttc_organism.png)
 
-##   
-What you can do with Tabahi IoT?
+## What you can do with Tabahi IoT?
 
 * Collect data from one node, process it on the cloud, then send the output to another node.
 * Analyze the bulk of collected data because small devices can't process that much data.
