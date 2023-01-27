@@ -4,7 +4,7 @@ date: 2022-04-29
 slug: features
 
 ---
-Sign up or Login to the console here: [console.tabahi.tech](https://console.tabahi.tech)
+Sign up or Login to the console here: [console.tabahi.tech](http://console.tabahi.tech)
 
 ## What is Tabahi Console
 
@@ -39,7 +39,7 @@ Add up to 10 devices. Currently, the Arduino library supports ESP32 and ESP866 d
 ### Variables Syncing
 
 * View, edit, add and delete variables that are synced in the device's memory.
-* Synced variables are essentially remote switches, but they support all other types of variables like boolean, integer, float, geo-coordinations, time, string, and HEX. 
+* Synced variables are essentially remote switches, but they support all other types of variables like boolean, integer, float, geo-coordinations, time, string, and HEX.
 * When you set a new value on the console, the device will be synced to that newer value.
 * Devices can also update the variables which are then synced to the console.
 
@@ -85,4 +85,4 @@ Javascript scripts that devices can trigger on the cloud can help offload heavy 
 
 ![](/screenshot-2022-05-04-at-04-58-04-console-tabahi-tech.png)
 
-![](https://02ip.ru/1DfRf7.png)Sign up or Login to the console here: [console.tabahi.tech](https://console.tabahi.tech)
+![](https://02ip.ru/1DfRf7.png)Sign up or Login to the console here: [console.tabahi.tech](http://console.tabahi.tech)
