@@ -17,11 +17,15 @@ import MenuToggle from '~/components/MenuToggle.vue'
 import Logo from '~/components/Logo.vue'
 import throttle from 'lodash/throttle'
 
+
+import GitLink from '~/components/GitLink.vue'
+
 export default {
   components: {
     ThemeSwitch,
     MenuToggle,
-    Logo
+    Logo,
+    GitLink
   },
   props: {
     menuToggle: {
