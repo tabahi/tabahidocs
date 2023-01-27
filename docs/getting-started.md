@@ -11,7 +11,7 @@ To start programming, follow these steps:
 1. Install [Arduino IDE](https://www.arduino.cc/en/software).
 2. Install [ESP32](https://microcontrollerslab.com/install-esp32-arduino-ide/) or [ESP8266](https://microcontrollerslab.com/how-to-install-esp8266-board-arduino-ide/) compiler on Arduino IDE.
 3. Download and add the [Tabahi Console library](https://github.com/tabahi/TabahiConsole) to the Arduino IDE. Goto **Sketch > Include Library > Add .ZIP Library** to install the library.
-4. Create an account on [console.tabahi.tech](http://console.tabahi.tech). Sign and view your Token on the [account](http://console.tabahi.tech/#account) page.
+4. Create an account on [console.tabahi.tech](https://console.tabahi.tech). Sign and view your Token on the [account](http://console.tabahi.tech/#account) page.
 5. Run the first example after configuring your `USER_TOKEN` and `USER_SECRET`.
 
 If everything works, you will see a new node appear on the [devices list](http://console.tabahi.tech/#nodes).
