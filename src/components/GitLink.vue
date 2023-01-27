@@ -32,7 +32,7 @@ a {
   text-decoration: none;
   border-radius: 3px;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 12px;
   font-weight: 700;
   transition: color .15s ease-in-out, background .15s ease-in-out;
 
