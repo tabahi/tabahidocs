@@ -4,6 +4,10 @@
       "section": "Introduction",
       "topics": [
         {
+          "title": "About",
+          "slug": "about"
+        },
+        {
           "title": "Features",
           "slug": "features"
         },
