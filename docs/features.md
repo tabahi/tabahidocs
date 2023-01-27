@@ -44,7 +44,10 @@ Add up to 10 devices. Currently, the Arduino library supports ESP32 and ESP866 d
 * When you set a new value on the console, the device will be synced to that newer value.
 * Devices can also update the variables which are then synced to the console.
 
-![](/screenshot-2022-05-04-at-04-56-12-console-tabahi-tech.png)
+
+
+<img src="/screenshot-2022-05-04-at-04-56-12-console-tabahi-tech.png" alt="console view" width="1400"/>
+
 
 In remote locations, there are usually dynamic situations where you can't trust a burned program to deal with whatever happens... like weather situations. In those cases, you need an online console where you can turn on or off switches depending on the condition without uploading a new code on the remote device... Synced variables can solve that problem. When you change a value on the web console, the device will also set to a new value.
 
@@ -52,15 +55,19 @@ In remote locations, there are usually dynamic situations where you can't trust 
 
 You can set up a telegram notification trigger for a certain change in a variable's value.
 
-![](/screenshot-2022-05-04-at-04-59-05-console-tabahi-tech.png)
+<img src="/screenshot-2022-05-04-at-04-59-05-console-tabahi-tech.png" alt="console view" width="1400"/>
+
+
 
 ### View and Plot data
 
 The data pushed by a device can be easily viewed, plotted, and downloaded.
 
-![](/screenshot-2022-05-04-at-04-56-26-console-tabahi-tech.png)
+<img src="/screenshot-2022-05-04-at-04-56-26-console-tabahi-tech.png" alt="console view" width="1400"/>
 
-![](/screenshot-2022-05-04-at-04-56-42-console-tabahi-tech.png)
+
+<img src="/screenshot-2022-05-04-at-04-56-42-console-tabahi-tech.png" alt="console view" width="1400"/>
+
 
 ### Configure the Device
 
