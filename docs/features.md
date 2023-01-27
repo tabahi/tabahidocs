@@ -6,7 +6,7 @@ slug: features
 ---
 Sign up or Login to the console here: [console.tabahi.tech](http://console.tabahi.tech)
 
-## What is Tabahi Console
+## Tabahi Console
 
 Tabahi Console is a Web-to-IoT interface to manage and remote control your programmable IoT devices. **It's like an online remote switch but with a lot more features than just a switch.**  
 Using Tabahi Console, you can:
