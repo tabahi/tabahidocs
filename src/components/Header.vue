@@ -3,7 +3,7 @@
     <Logo :color="logoColor" />
     <nav class="nav">
       <ThemeSwitch v-on:theme-change="updateLogo" />
-      <GitLink class="git" />
+      <GitLink class="git" size="large" />
       <MenuToggle v-if="menuToggle" />
     </nav>
   </header>
