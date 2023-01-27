@@ -6,7 +6,7 @@ slug: scripts
 ---
 ## Scripts
 
-Scripts in the [console](http://console.tabahi.tech/#scripts) are executed in a javascript container in order to process computations on the console cloud. Scripts only support basic javascript functions, `node`class functions to parse data to and from devices, and `script` class functions for debugging purposes.
+Scripts in the [console](https://console.tabahi.tech/#scripts) are executed in a javascript container in order to process computations on the console cloud. Scripts only support basic javascript functions, `node`class functions to parse data to and from devices, and `script` class functions for debugging purposes.
 
 ### Arguments
 
@@ -29,7 +29,7 @@ if(args)
 
 ### Script Logs
 
-Script logs are for debugging purposing and can only be viewed on the console when the Debug button is pressed. In comparison, `print()`prints the data as the externally viewable output of the script.
+Script logs are for debugging purposes and can only be viewed on the console when the Debug button is pressed. In comparison, `print()`prints the data as the externally viewable output of the script.
 
 ```javascript
 script.log(new Date() + "\t Test script");//log time and date of run
