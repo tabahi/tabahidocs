@@ -59,13 +59,13 @@ a {
 
   &.large {
     @include respond-above(sm) {
-      font-size: 18px;
-      padding: 12px 20px;
-      line-height: 24px;
+      font-size: 12px;
+      padding: 8px 10px;
+      line-height: 14px;
 
       svg {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 14px;
       }
     }
   }
