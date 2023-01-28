@@ -4,7 +4,7 @@
       <h1>{{ $static.metadata.siteName }} - {{ this.description }}</h1>
       <nav>
         <!-- To use other icons here, you need to import them in the Shortcut component -->
-        <Shortcut link="/features" text="Introduction" icon="star-icon" />
+        <Shortcut link="/about" text="About" icon="star-icon" />
         <Shortcut link="/getting-started" text="Getting Started" icon="play-icon" />
         <Shortcut link="/arduino-library" text="Arduino Library" icon="cpu-icon" />
       </nav>
