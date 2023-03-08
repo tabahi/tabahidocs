@@ -14,8 +14,10 @@ Small devices are limited in their ability to compute, we provide the perfect so
 
 ## Advantages
 
-* Collect data from one node, process it on the cloud, then send the output to another node.
+* Collect data from one node, process it on the cloud, and then send the output to another node.
 * Analyze the bulk of collected data because small devices can't process that much data.
 * Do machine learning on the cloud using the data collected.
 * Use cloud scripts to make predictions and control the nodes by themselves based on the pattern learned from the other nodes.
-* DIY: Easy to set up using your own easily available cheap devices.
+* DIY: Easy to set up using your own readily available cheap devices.
+
+![](https://console.tabahi.tech/stats/2.png)
