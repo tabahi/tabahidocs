@@ -88,4 +88,4 @@ Javascript scripts that devices can trigger on the cloud can help offload heavy 
 
 Sign up or Login to the console here: [console.tabahi.tech](https://console.tabahi.tech)
 
-<img src="https://02ip.ru/1DfRf7.png"  width="0"/>
+![](https://console.tabahi.tech/stats/3.png)
