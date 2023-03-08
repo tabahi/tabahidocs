@@ -73,3 +73,5 @@ script.log("Data:"); script.log(data_rows);
 //add a new data row:
 await pushData(NT, {"air": 0.5, "surfacer": 3.2});
 ```
+
+![](https://console.tabahi.tech/stats/6.png)
