@@ -10,6 +10,10 @@
       </nav>
       
     </div>
+
+    <div id="stats_img">
+        <img src="https://console.tabahi.tech/stats/1.png">
+    </div>
   </Layout>
 </template>
 
