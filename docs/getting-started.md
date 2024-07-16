@@ -152,18 +152,13 @@ int sync_variables()
 
 
 
-
-
-
-
-
 void push_data()
 {
   //create a data row:
   Console.newDataRow(); //new row with a current timestamp
   Console.push_ulong("a",  123);
   Console.push_float("b", 456.789);
-  Console.set_geo("location", "1.223", "-5.235"); //will link to google maps on the console
+  Console.push_String("geo_loc", "1.223, -5.235"); //"using "geo" in the name will link to google maps
 
   WiFiClient TCPclient;
   //Data is not sent until 'CommitData' is called.
